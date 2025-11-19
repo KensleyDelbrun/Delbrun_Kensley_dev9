@@ -1,0 +1,110 @@
+{
+  "common": {
+    "appName": "News App",
+    "save": "Save",
+    "cancel": "Cancel",
+    "error": "An error occurred",
+    "loading": "Loading...",
+    "retry": "Retry"
+  },
+  "tabs": {
+    "home": "Home",
+    "categories": "Categories",
+    "search": "Search",
+    "saved": "Saved",
+    "profile": "Profile"
+  },
+  "home": {
+    "title": "Headlines",
+    "searchPlaceholder": "Search articles...",
+    "noResults": "No articles found.",
+    "emptyState": "Start by searching for topics you're interested in.",
+    "greeting": "Good morning",
+    "greeting_afternoon": "Good afternoon",
+    "greeting_evening": "Good evening",
+    "featuredNews": "Featured News",
+    "exploreByTheme": "Explore by Theme",
+    "themeConstitution": "Constitution & Rights",
+    "themeInstitutions": "State Institutions",
+    "themeCulture": "Culture & Society",
+    "themeEnvironment": "Environment"
+  },
+  "article": {
+    "by": "By",
+    "source": "Source",
+    "save": "Save Article",
+    "unsave": "Unsave Article",
+    "savedMessage": "Article saved!",
+    "unsavedMessage": "Article removed."
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Search for news, topics...",
+    "recentSearches": "Recent Searches",
+    "clear": "Clear",
+    "trending": "Trending Topics"
+  },
+  "saved": {
+    "title": "Saved Articles",
+    "emptyTitle": "No saved articles yet",
+    "emptyMessage": "Your saved articles will appear here. Start exploring and save what you like!"
+  },
+  "profile": {
+    "title": "Profile",
+    "editProfile": "Edit Profile",
+    "preferences": "Preferences",
+    "notifications": "Notifications",
+    "help": "Help & Support",
+    "logout": "Log Out",
+    "logoutConfirm": "Are you sure you want to log out?",
+    "language": "Language",
+    "appearance": "Appearance",
+    "textSize": "Text Size"
+  },
+  "editProfile": {
+    "title": "Edit Profile",
+    "username": "Username",
+    "email": "Email",
+    "avatar": "Avatar",
+    "changeAvatar": "Change Avatar",
+    "updateSuccess": "Profile updated successfully!"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "info": "Manage how you receive notifications from the app. You can customize your preferences at any time.",
+    "newArticles": "New Articles",
+    "newArticlesDesc": "Get notified when new articles match your interests.",
+    "readReminders": "Reading Reminders",
+    "readRemindersDesc": "Receive a daily reminder to catch up on your saved articles.",
+    "weeklySummary": "Weekly Summary",
+    "weeklySummaryDesc": "Receive a summary of the top news each week.",
+    "communityUpdates": "Community Updates",
+    "communityUpdatesDesc": "News and updates from the community.",
+    "importantNews": "Important News",
+    "importantNewsDesc": "Receive alerts for major breaking news.",
+    "tip": "Tip: Customize your notification sounds in your device's system settings.",
+    "featureDisabled": "This feature will be available soon.",
+    "reminderTime": "Reminder Time",
+    "permissionDenied": "To enable notifications, please grant permission in your device settings.",
+    "reminderTitle": "Time to read!",
+    "reminderBody": "Open the app to catch up on your saved articles."
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "magicLink": "Send Magic Link",
+    "magicLinkSent": "Check your email for the magic link!",
+    "or": "or",
+    "continueWith": "Continue with"
+  },
+  "categoryDetail": {
+    "noResults": "No results found",
+    "noArticles": "No articles available",
+    "notFound": "Category not found",
+    "searchPlaceholder": "Search articles...",
+    "article": "article",
+    "articles": "articles"
+  }
+}

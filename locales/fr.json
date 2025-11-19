@@ -1,0 +1,122 @@
+{
+  "common": {
+    "appName": "App d'Actualités",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "error": "Une erreur est survenue",
+    "loading": "Chargement...",
+    "retry": "Réessayer"
+  },
+  "tabs": {
+    "home": "Accueil",
+    "search": "Recherche",
+    "saved": "Sauvegardés",
+    "profile": "Profil"
+  },
+  "home": {
+    "title": "À la une",
+    "searchPlaceholder": "Rechercher des articles...",
+    "noResults": "Aucun article trouvé.",
+    "emptyState": "Commencez par rechercher des sujets qui vous intéressent.",
+    "greeting": "Bonjour",
+    "greeting_afternoon": "Bon après-midi",
+    "greeting_evening": "Bonsoir"
+  },
+  "article": {
+    "by": "Par",
+    "source": "Source",
+    "save": "Sauvegarder l'article",
+    "unsave": "Retirer l'article",
+    "savedMessage": "Article sauvegardé !",
+    "unsavedMessage": "Article retiré."
+  },
+  "search": {
+    "title": "Recherche",
+    "placeholder": "Rechercher des actualités, sujets...",
+    "recentSearches": "Recherches récentes",
+    "clear": "Effacer",
+    "trending": "Sujets populaires"
+  },
+  "saved": {
+    "title": "Articles Sauvegardés",
+    "emptyTitle": "Aucun article sauvegardé",
+    "emptyMessage": "Vos articles sauvegardés apparaîtront ici. Commencez à explorer et sauvegardez ce qui vous plaît !"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Modifier le profil",
+    "preferences": "Préférences",
+    "notifications": "Notifications",
+    "help": "Aide & Support",
+    "logout": "Déconnexion",
+    "logoutConfirm": "Êtes-vous sûr de vouloir vous déconnecter ?",
+    "language": "Langue",
+    "appearance": "Apparence",
+    "textSize": "Taille du texte"
+  },
+  "editProfile": {
+    "title": "Modifier le profil",
+    "username": "Nom d'utilisateur",
+    "email": "E-mail",
+    "avatar": "Avatar",
+    "changeAvatar": "Changer d'avatar",
+    "updateSuccess": "Profil mis à jour avec succès !"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "info": "Gérez la manière dont vous recevez les notifications de l'application. Vous pouvez personnaliser vos préférences à tout moment.",
+    "newArticles": "Nouveaux Articles",
+    "newArticlesDesc": "Soyez notifié lorsque de nouveaux articles correspondent à vos intérêts.",
+    "readReminders": "Rappels de lecture",
+    "readRemindersDesc": "Recevez un rappel quotidien pour lire vos articles sauvegardés.",
+    "weeklySummary": "Résumé Hebdomadaire",
+    "weeklySummaryDesc": "Recevez un résumé des principales actualités chaque semaine.",
+    "communityUpdates": "Nouvelles de la Communauté",
+    "communityUpdatesDesc": "Nouvelles et mises à jour de la communauté.",
+    "importantNews": "Actualités Importantes",
+    "importantNewsDesc": "Recevez des alertes pour les dernières nouvelles majeures.",
+    "tip": "Astuce : Personnalisez les sons de notification dans les paramètres système de votre appareil.",
+    "featureDisabled": "Cette fonctionnalité sera bientôt disponible.",
+    "reminderTime": "Heure du rappel",
+    "permissionDenied": "Pour activer les notifications, veuillez accorder la permission dans les paramètres de votre appareil.",
+    "reminderTitle": "C'est l'heure de lire !",
+    "reminderBody": "Ouvrez l'application pour rattraper votre retard sur vos articles sauvegardés."
+  },
+  "auth": {
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "magicLink": "Envoyer le lien magique",
+    "magicLinkSent": "Vérifiez votre e-mail pour le lien magique !",
+    "or": "ou",
+    "continueWith": "Continuer avec"
+  },
+  "categoryDetail": {
+    "noResults": "Aucun résultat",
+    "noArticles": "Aucun article disponible",
+    "notFound": "Catégorie introuvable",
+    "searchPlaceholder": "Rechercher dans les articles...",
+    "article": "article",
+    "articles": "articles"
+  },
+  "help": {
+    "title": "Aide & Support",
+    "faq": "Questions fréquentes",
+    "otherResources": "Autres ressources",
+    "privacyPolicy": "Politique de confidentialité",
+    "aboutUs": "À propos de nous",
+    "needMoreHelp": "Besoin d'aide supplémentaire ?",
+    "contactSupport": "Contactez notre support par e-mail.",
+    "faq1_q": "Comment puis-je changer la langue de l'application ?",
+    "faq1_a": "Vous pouvez changer la langue à tout moment depuis votre écran de profil. Appuyez sur l'option 'Langue' pour basculer entre le Français et le Créole Haïtien.",
+    "faq2_q": "Comment fonctionne le mode hors ligne ?",
+    "faq2_a": "Les articles que vous consultez sont automatiquement mis en cache pour une lecture hors ligne. Vous pouvez gérer l'espace de stockage et vider le cache dans Paramètres > Stockage.",
+    "faq3_q": "Comment gérer mes notifications ?",
+    "faq3_a": "Allez dans Paramètres > Notifications pour activer ou désactiver les notifications et les sons. Vous pouvez également gérer les notifications par catégorie depuis l'écran de notifications.",
+    "faq4_q": "Mes données personnelles sont-elles en sécurité ?",
+    "faq4_a": "Oui, nous prenons la sécurité de vos données très au sérieux. Veuillez consulter notre Politique de confidentialité pour plus de détails.",
+    "emailSubject": "Demande de support - Citoyen Éclairé",
+    "emailError": "Impossible d'ouvrir le client de messagerie. Veuillez nous contacter à support@citoyeneclaire.ht"
+  }
+}
