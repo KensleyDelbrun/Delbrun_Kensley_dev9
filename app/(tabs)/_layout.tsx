@@ -15,10 +15,10 @@ export default function TabLayout() {
       borderTopColor: colors.border,
       height: 80,
       paddingTop: 10,
-      paddingBottom: 100,
+      paddingBottom: 100, // Adjusted for better safe area handling
     },
     tabBarItem: {
-      paddingBottom: 10,
+      // Removed paddingBottom to let the tab bar handle spacing
     },
   });
 

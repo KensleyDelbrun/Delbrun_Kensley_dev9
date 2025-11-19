@@ -3,21 +3,21 @@ import { View, Text, StyleSheet, TouchableOpacity, Alert, KeyboardAvoidingView, 
 import { useRouter } from 'expo-router';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Book } from 'lucide-react-native';
+import { BookUser } from 'lucide-react-native';
 import AuthInput from '@/components/AuthInput';
 import AuthButton from '@/components/AuthButton';
 
 export default function RegisterScreen() {
+  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [fullName, setFullName] = useState('');
   const [loading, setLoading] = useState(false);
   const { signUp } = useAuth();
   const { t } = useLanguage();
   const router = useRouter();
 
   const handleRegister = async () => {
-    if (!email || !password || !fullName) {
+    if (!fullName || !email || !password) {
       Alert.alert(t('register.errorTitle'), t('login.errorAllFields'));
       return;
     }
@@ -30,9 +30,9 @@ export default function RegisterScreen() {
     } else {
       Alert.alert(
         t('register.successTitle'),
-        t('register.successMessage')
+        t('register.successMessage'),
+        [{ text: 'OK', onPress: () => router.push('/login') }]
       );
-      router.replace('/login');
     }
   };
 
@@ -45,7 +45,7 @@ export default function RegisterScreen() {
         <View style={styles.card}>
           <View style={styles.logoContainer}>
             <View style={styles.iconCircle}>
-              <Book color="#3B82F6" size={48} strokeWidth={2} />
+              <BookUser color="#3B82F6" size={48} strokeWidth={2} />
             </View>
           </View>
 
@@ -85,10 +85,10 @@ export default function RegisterScreen() {
               title={t('register.signUpButton')}
               onPress={handleRegister}
               loading={loading}
-              style={styles.registerButton}
+              style={styles.loginButton}
             />
 
-            <TouchableOpacity onPress={() => router.replace('/login')}>
+            <TouchableOpacity onPress={() => router.push('/login')}>
               <Text style={styles.linkText}>{t('register.hasAccount')}</Text>
             </TouchableOpacity>
           </View>
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     color: '#374151',
     marginBottom: 8,
   },
-  registerButton: {
+  loginButton: {
     marginTop: 8,
     marginBottom: 16,
   },

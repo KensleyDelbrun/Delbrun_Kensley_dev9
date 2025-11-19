@@ -5,22 +5,38 @@
     "cancel": "Annuler",
     "error": "Une erreur est survenue",
     "loading": "Chargement...",
-    "retry": "Réessayer"
+    "retry": "Réessayer",
+    "success": "Succès",
+    "confirm": "Confirmer",
+    "or": "ou",
+    "user": "Utilisateur",
+    "version": "Version",
+    "lastUpdate": "Dernière mise à jour",
+    "back": "Retour",
+    "underConstruction": "Cet écran est en construction."
   },
   "tabs": {
     "home": "Accueil",
     "search": "Recherche",
     "saved": "Sauvegardés",
-    "profile": "Profil"
+    "profile": "Profil",
+    "categories": "Catégories",
+    "discover": "Découvrir"
   },
   "home": {
     "title": "À la une",
-    "searchPlaceholder": "Rechercher des articles...",
+    "searchPlaceholder": "Rechercher un sujet...",
     "noResults": "Aucun article trouvé.",
     "emptyState": "Commencez par rechercher des sujets qui vous intéressent.",
     "greeting": "Bonjour",
     "greeting_afternoon": "Bon après-midi",
-    "greeting_evening": "Bonsoir"
+    "greeting_evening": "Bonsoir",
+    "featuredNews": "Nouveautés",
+    "exploreByTheme": "Explorer par Thème",
+    "themeConstitution": "Constitution & Droits",
+    "themeInstitutions": "Institutions de l'État",
+    "themeCulture": "Culture & Société",
+    "themeEnvironment": "Environnement"
   },
   "article": {
     "by": "Par",
@@ -28,7 +44,8 @@
     "save": "Sauvegarder l'article",
     "unsave": "Retirer l'article",
     "savedMessage": "Article sauvegardé !",
-    "unsavedMessage": "Article retiré."
+    "unsavedMessage": "Article retiré.",
+    "savedOffline": "Article sauvegardé et disponible hors ligne."
   },
   "search": {
     "title": "Recherche",
@@ -40,10 +57,14 @@
   "saved": {
     "title": "Articles Sauvegardés",
     "emptyTitle": "Aucun article sauvegardé",
-    "emptyMessage": "Vos articles sauvegardés apparaîtront ici. Commencez à explorer et sauvegardez ce qui vous plaît !"
+    "emptyMessage": "Vos articles sauvegardés apparaîtront ici. Explorez et sauvegardez ce qui vous plaît !",
+    "searchPlaceholder": "Rechercher dans les articles sauvegardés...",
+    "noResults": "Aucun article trouvé pour votre recherche.",
+    "loginRequiredTitle": "Connexion requise",
+    "loginRequiredMessage": "Connectez-vous pour voir vos articles sauvegardés."
   },
   "profile": {
-    "title": "Profil",
+    "title": "SITOYEN ÉCLAIRÉ",
     "editProfile": "Modifier le profil",
     "preferences": "Préférences",
     "notifications": "Notifications",
@@ -52,7 +73,17 @@
     "logoutConfirm": "Êtes-vous sûr de vouloir vous déconnecter ?",
     "language": "Langue",
     "appearance": "Apparence",
-    "textSize": "Taille du texte"
+    "textSize": "Taille du texte",
+    "changeLanguageTitle": "Changer de langue",
+    "changeLanguageMessage": "Choisissez votre langue préférée",
+    "helpSupport": "Aide & Support",
+    "signOut": "Déconnexion",
+    "signOutConfirmTitle": "Déconnexion",
+    "signOutConfirmMessage": "Êtes-vous sûr de vouloir vous déconnecter ?",
+    "notConnected": "Non connecté",
+    "notConnectedMessage": "Connectez-vous pour voir votre profil",
+    "signIn": "Se connecter",
+    "settings": "Paramètres"
   },
   "editProfile": {
     "title": "Modifier le profil",
@@ -60,27 +91,33 @@
     "email": "E-mail",
     "avatar": "Avatar",
     "changeAvatar": "Changer d'avatar",
-    "updateSuccess": "Profil mis à jour avec succès !"
+    "updateSuccess": "Profil mis à jour avec succès !",
+    "fullName": "Nom complet",
+    "fullNamePlaceholder": "Entrez votre nom complet",
+    "emailAddress": "Adresse e-mail",
+    "errorNameEmpty": "Le nom ne peut pas être vide.",
+    "successMessage": "Profil mis à jour avec succès.",
+    "errorMessage": "Impossible de mettre à jour le profil."
   },
   "notifications": {
     "title": "Notifications",
     "info": "Gérez la manière dont vous recevez les notifications de l'application. Vous pouvez personnaliser vos préférences à tout moment.",
     "newArticles": "Nouveaux Articles",
-    "newArticlesDesc": "Soyez notifié lorsque de nouveaux articles correspondent à vos intérêts.",
+    "newArticlesDesc": "Soyez notifié lorsque de nouveaux articles sont publiés.",
     "readReminders": "Rappels de lecture",
-    "readRemindersDesc": "Recevez un rappel quotidien pour lire vos articles sauvegardés.",
+    "readRemindersDesc": "Recevez un rappel pour lire vos articles sauvegardés.",
     "weeklySummary": "Résumé Hebdomadaire",
-    "weeklySummaryDesc": "Recevez un résumé des principales actualités chaque semaine.",
+    "weeklySummaryDesc": "Recevez un résumé des actualités populaires de la semaine.",
     "communityUpdates": "Nouvelles de la Communauté",
     "communityUpdatesDesc": "Nouvelles et mises à jour de la communauté.",
     "importantNews": "Actualités Importantes",
     "importantNewsDesc": "Recevez des alertes pour les dernières nouvelles majeures.",
-    "tip": "Astuce : Personnalisez les sons de notification dans les paramètres système de votre appareil.",
+    "tip": "Astuce : Activez les notifications importantes pour ne manquer aucune information urgente concernant Haïti.",
     "featureDisabled": "Cette fonctionnalité sera bientôt disponible.",
     "reminderTime": "Heure du rappel",
     "permissionDenied": "Pour activer les notifications, veuillez accorder la permission dans les paramètres de votre appareil.",
     "reminderTitle": "C'est l'heure de lire !",
-    "reminderBody": "Ouvrez l'application pour rattraper votre retard sur vos articles sauvegardés."
+    "reminderBody": "Ouvrez l'application pour lire vos articles sauvegardés."
   },
   "auth": {
     "signIn": "Se connecter",
@@ -92,6 +129,34 @@
     "or": "ou",
     "continueWith": "Continuer avec"
   },
+  "login": {
+    "title": "SITOYEN ÉCLAIRÉ",
+    "subtitle": "Connaître son pays, c'est mieux le servir",
+    "googleSignIn": "Continuer avec Google",
+    "facebookSignIn": "Continuer avec Facebook",
+    "emailLabel": "Adresse e-mail",
+    "passwordLabel": "Mot de passe",
+    "signInButton": "Se connecter",
+    "noAccount": "Pas de compte ? S'inscrire",
+    "errorTitle": "Erreur de connexion",
+    "errorInvalidCredentials": "L'adresse e-mail ou le mot de passe est incorrect.",
+    "errorGoogle": "Impossible de se connecter avec Google. Veuillez réessayer.",
+    "errorFacebook": "Impossible de se connecter avec Facebook. Veuillez réessayer.",
+    "errorAllFields": "Veuillez remplir tous les champs."
+  },
+  "register": {
+    "title": "Créer un compte",
+    "subtitle": "Rejoignez la communauté des citoyens éclairés",
+    "fullNameLabel": "Nom complet",
+    "fullNamePlaceholder": "Votre nom complet",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Mot de passe",
+    "signUpButton": "S'inscrire",
+    "hasAccount": "Vous avez déjà un compte ? Se connecter",
+    "errorTitle": "Erreur d'inscription",
+    "successTitle": "Inscription réussie",
+    "successMessage": "Veuillez vérifier votre e-mail pour activer votre compte."
+  },
   "categoryDetail": {
     "noResults": "Aucun résultat",
     "noArticles": "Aucun article disponible",
@@ -99,6 +164,17 @@
     "searchPlaceholder": "Rechercher dans les articles...",
     "article": "article",
     "articles": "articles"
+  },
+  "categories": {
+    "title": "Toutes les Catégories",
+    "subtitle": "Explorez tous les domaines de connaissance",
+    "searchPlaceholder": "Rechercher une catégorie...",
+    "noResults": "Aucune catégorie trouvée"
+  },
+  "errors": {
+    "loginToSave": "Connectez-vous pour sauvegarder des articles.",
+    "articleNotFound": "Article non trouvé.",
+    "checkConnection": "Vérifiez votre connexion ou réessayez plus tard."
   },
   "help": {
     "title": "Aide & Support",
@@ -118,5 +194,53 @@
     "faq4_a": "Oui, nous prenons la sécurité de vos données très au sérieux. Veuillez consulter notre Politique de confidentialité pour plus de détails.",
     "emailSubject": "Demande de support - Citoyen Éclairé",
     "emailError": "Impossible d'ouvrir le client de messagerie. Veuillez nous contacter à support@citoyeneclaire.ht"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "appearance": "Apparence",
+    "automaticTheme": "Thème automatique",
+    "automaticThemeDesc": "Suit automatiquement le thème de votre système (Clair/Sombre).",
+    "darkMode": "Mode sombre",
+    "textSize": "Taille du texte",
+    "textSizeSmall": "Petite",
+    "textSizeMedium": "Moyenne",
+    "textSizeLarge": "Grande",
+    "notifications": "Notifications",
+    "enableNotifications": "Activer les notifications",
+    "notificationSound": "Son des notifications",
+    "manageNotifications": "Gérer les notifications",
+    "storage": "Stockage",
+    "autoDownload": "Téléchargement automatique",
+    "usedSpace": "Espace utilisé",
+    "clearCache": "Vider le cache",
+    "clearCacheConfirmTitle": "Vider le cache",
+    "clearCacheConfirmMessage": "Êtes-vous sûr de vouloir vider le cache ?",
+    "clearCacheButton": "Vider",
+    "cacheClearedSuccess": "Cache vidé avec succès",
+    "cacheClearedError": "Une erreur est survenue lors du vidage du cache",
+    "about": "À propos"
+  },
+  "privacy": {
+    "lastUpdated": "Dernière mise à jour : 06 Oct 2025",
+    "intro": "Bienvenue sur Citoyen Éclairé. Nous nous engageons à protéger votre vie privée. Cette politique de confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous utilisez notre application mobile.",
+    "section1Title": "1. Collecte d'informations",
+    "section1Content": "Nous collectons les informations que vous nous fournissez directement, telles que votre nom, votre adresse e-mail et vos préférences linguistiques lorsque vous créez un compte. Nous collectons également des informations d'utilisation anonymes pour améliorer l'application.",
+    "section2Title": "2. Utilisation de vos informations",
+    "section2Content": "Nous utilisons vos informations pour : fournir, maintenir et améliorer notre service ; personnaliser votre expérience ; communiquer avec vous, y compris pour envoyer des notifications si vous y consentez ; et surveiller et analyser les tendances et l'utilisation.",
+    "section3Title": "3. Partage de vos informations",
+    "section3Content": "Nous ne partageons pas vos informations personnelles avec des tiers, sauf si la loi l'exige ou pour protéger nos droits."
+  },
+  "about": {
+    "title": "À propos de Citoyen Éclairé",
+    "missionTitle": "Notre Mission",
+    "missionText": "Fournir aux citoyens haïtiens un accès facile et fiable aux informations civiques essentielles, y compris la Constitution, le fonctionnement des institutions de l'État et les nouvelles importantes, pour encourager une citoyenneté active et éclairée.",
+    "featuresTitle": "Fonctionnalités Clés",
+    "feature1": "Accès à la Constitution",
+    "feature2": "Guide sur les Institutions",
+    "feature3": "Actualités Fiables",
+    "feature4": "Mode Hors Ligne",
+    "feature5": "Support Bilingue (Français/Créole)",
+    "contactTitle": "Contactez-nous",
+    "contactText": "Pour toute question ou suggestion, contactez-nous à support@citoyeneclaire.ht"
   }
 }

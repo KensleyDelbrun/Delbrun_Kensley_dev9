@@ -1,144 +1,147 @@
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Switch } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Alert, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
+import { useRouter } from 'expo-router';
+import { useAuth } from '@/contexts/AuthContext';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useAppearance } from '@/contexts/AppearanceContext';
-import { useNotifications, NotificationSettings } from '@/hooks/useNotifications';
-import ScreenHeader from '@/components/ScreenHeader';
-import { Info } from 'lucide-react-native';
+import { Book } from 'lucide-react-native';
+import AuthInput from '@/components/AuthInput';
+import AuthButton from '@/components/AuthButton';
 
-type NotificationItemProps = {
-  title: string;
-  description: string;
-  value: boolean;
-  onValueChange: (value: boolean) => void;
-};
-
-const NotificationItem = ({ title, description, value, onValueChange }: NotificationItemProps) => {
-  const { colors, textSize } = useAppearance();
-  const styles = getStyles(colors, textSize);
-
-  return (
-    <View style={styles.itemContainer}>
-      <View style={styles.textContainer}>
-        <Text style={styles.itemTitle}>{title}</Text>
-        <Text style={styles.itemDescription}>{description}</Text>
-      </View>
-      <Switch
-        value={value}
-        onValueChange={onValueChange}
-        trackColor={{ false: '#767577', true: colors.primary }}
-        thumbColor={value ? '#f4f3f4' : '#f4f3f4'}
-      />
-    </View>
-  );
-};
-
-export default function NotificationScreen() {
+export default function LoginScreen() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const { signIn } = useAuth();
   const { t } = useLanguage();
-  const { colors, textSize } = useAppearance();
-  const { settings, updateSetting } = useNotifications();
-  const styles = getStyles(colors, textSize);
+  const router = useRouter();
 
-  const notificationItems: { key: keyof NotificationSettings; title: string; desc: string }[] = [
-    { key: 'newArticles', title: t('notifications.newArticles'), desc: t('notifications.newArticlesDesc') },
-    { key: 'readReminders', title: t('notifications.readReminders'), desc: t('notifications.readRemindersDesc') },
-    { key: 'weeklySummary', title: t('notifications.weeklySummary'), desc: t('notifications.weeklySummaryDesc') },
-    { key: 'communityUpdates', title: t('notifications.communityUpdates'), desc: t('notifications.communityUpdatesDesc') },
-    { key: 'importantNews', title: t('notifications.importantNews'), desc: t('notifications.importantNewsDesc') },
-  ];
+  const handleLogin = async () => {
+    if (!email || !password) {
+      Alert.alert(t('login.errorTitle'), t('login.errorAllFields'));
+      return;
+    }
+    setLoading(true);
+    const { error } = await signIn(email, password);
+    setLoading(false);
+
+    if (error) {
+      Alert.alert(t('login.errorTitle'), t('login.errorInvalidCredentials'));
+    } else {
+      // The onAuthStateChange listener in AuthContext will handle the redirect to the main app.
+      router.replace('/(tabs)');
+    }
+  };
 
   return (
-    <View style={styles.container}>
-      <ScreenHeader title={t('notifications.title')} />
-      <ScrollView contentContainerStyle={styles.content}>
-        <View style={styles.infoBox}>
-          <Info size={20} color={colors.primary} />
-          <Text style={styles.infoText}>{t('notifications.info')}</Text>
-        </View>
-        <View style={styles.tipBox}>
-          <Text style={styles.tipText}>{t('notifications.tip')}</Text>
-        </View>
-        <View style={styles.listContainer}>
-          {notificationItems.map((item, index) => (
-            <React.Fragment key={item.key}>
-              <NotificationItem
-                title={item.title}
-                description={item.desc}
-                value={settings[item.key]}
-                onValueChange={(value) => updateSetting(item.key, value)}
-              />
-              {index < notificationItems.length - 1 && <View style={styles.divider} />}
-            </React.Fragment>
-          ))}
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+    >
+      <ScrollView contentContainerStyle={styles.scrollContent} keyboardShouldPersistTaps="handled">
+        <View style={styles.card}>
+          <View style={styles.logoContainer}>
+            <View style={styles.iconCircle}>
+              <Book color="#3B82F6" size={48} strokeWidth={2} />
+            </View>
+          </View>
+
+          <Text style={styles.title}>{t('login.title')}</Text>
+          <Text style={styles.subtitle}>{t('login.subtitle')}</Text>
+
+          <View style={styles.form}>
+            <Text style={styles.label}>{t('login.emailLabel')}</Text>
+            <AuthInput
+              placeholder="exemple@email.com"
+              value={email}
+              onChangeText={setEmail}
+              keyboardType="email-address"
+              autoCapitalize="none"
+              autoComplete="email"
+            />
+
+            <Text style={styles.label}>{t('login.passwordLabel')}</Text>
+            <AuthInput
+              placeholder="••••••••"
+              value={password}
+              onChangeText={setPassword}
+              secureTextEntry
+              autoComplete="current-password"
+            />
+
+            <AuthButton
+              title={t('login.signInButton')}
+              onPress={handleLogin}
+              loading={loading}
+              style={styles.loginButton}
+            />
+
+            <TouchableOpacity onPress={() => router.push('/register')}>
+              <Text style={styles.linkText}>{t('login.noAccount')}</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </ScrollView>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
-const getStyles = (colors: any, textSize: number) => StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: '#3B82F6',
   },
-  content: {
-    padding: 16,
+  scrollContent: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    padding: 24,
   },
-  infoBox: {
-    backgroundColor: colors.surface,
-    borderRadius: 12,
-    padding: 16,
-    flexDirection: 'row',
+  card: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 16,
+    padding: 32,
     alignItems: 'center',
+  },
+  logoContainer: {
     marginBottom: 16,
   },
-  infoText: {
-    flex: 1,
-    marginLeft: 12,
-    color: colors.textSecondary,
-    fontSize: 14 * textSize,
-    lineHeight: 20 * textSize,
+  iconCircle: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: '#EFF6FF',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  tipBox: {
-    backgroundColor: colors.primary + '20',
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 24,
-  },
-  tipText: {
-    color: colors.primary,
-    fontSize: 14 * textSize,
-    lineHeight: 20 * textSize,
+  title: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: '#1F2937',
+    marginBottom: 8,
     textAlign: 'center',
   },
-  listContainer: {
-    backgroundColor: colors.surface,
-    borderRadius: 12,
+  subtitle: {
+    fontSize: 14,
+    color: '#6B7280',
+    textAlign: 'center',
+    marginBottom: 24,
   },
-  itemContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingVertical: 16,
-    paddingHorizontal: 16,
+  form: {
+    width: '100%',
   },
-  textContainer: {
-    flex: 1,
-    marginRight: 16,
+  label: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#374151',
+    marginBottom: 8,
   },
-  itemTitle: {
-    fontSize: 16 * textSize,
-    color: colors.text,
-    fontWeight: '500',
-    marginBottom: 4,
+  loginButton: {
+    marginTop: 8,
+    marginBottom: 16,
   },
-  itemDescription: {
-    fontSize: 13 * textSize,
-    color: colors.textSecondary,
-  },
-  divider: {
-    height: 1,
-    backgroundColor: colors.border,
-    marginLeft: 16,
+  linkText: {
+    fontSize: 14,
+    color: '#3B82F6',
+    textAlign: 'center',
+    fontWeight: '600',
   },
 });

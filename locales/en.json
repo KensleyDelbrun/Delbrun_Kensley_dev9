@@ -99,6 +99,21 @@
     "or": "or",
     "continueWith": "Continue with"
   },
+  "login": {
+    "title": "ENLIGHTENED CITIZEN",
+    "subtitle": "To know your country is to serve it better",
+    "googleSignIn": "Continue with Google",
+    "facebookSignIn": "Continue with Facebook",
+    "emailLabel": "Email Address",
+    "passwordLabel": "Password",
+    "signInButton": "Sign In",
+    "noAccount": "No account? Sign Up",
+    "errorTitle": "Login Error",
+    "errorInvalidCredentials": "Invalid email or password.",
+    "errorGoogle": "Could not sign in with Google. Please try again.",
+    "errorFacebook": "Could not sign in with Facebook. Please try again.",
+    "errorAllFields": "Please fill in all fields."
+  },
   "categoryDetail": {
     "noResults": "No results found",
     "noArticles": "No articles available",
